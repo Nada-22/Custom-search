@@ -1,1 +1,20 @@
-<p>posts works!</p>
+<div class="container bootstrap snippets bootdeys">
+    <div class="row">
+        <div class="form-group">
+            <input type="text" class="form-control mb-4" placeholder="Search" [(ngModel)]="value" id="listSearch">
+          </div>
+        <div class="col-md-4 col-sm-6 content-card" *ngFor="let post of posts| searchfilter: value">
+            <div class="card-big-shadow">
+                <div class="card card-just-text" data-background="color" data-color="blue" data-radius="none">
+                    <div class="content">
+                        <h6 class="category">post id {{post.id}}</h6>
+                        <!-- <h4 class="title"><a href="#">{{post.title}}</a></h4> -->
+                        <p class="description">{{post.body}} </p>
+                    </div>
+                </div> <!-- end card -->
+            </div>
+        </div>
+        
+    
+    </div>
+    </div>

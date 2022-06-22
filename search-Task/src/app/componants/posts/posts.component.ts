@@ -8,7 +8,8 @@ import { PostsService } from 'src/app/services/posts.service';
 })
 export class PostsComponent implements OnInit {
   posts: Post[] = [];
-  constructor(private _posts:PostsService) { }
+  public value: any = '';
+  constructor(private _posts: PostsService) { }
 
   ngOnInit(): void {
     this.getPosts();
