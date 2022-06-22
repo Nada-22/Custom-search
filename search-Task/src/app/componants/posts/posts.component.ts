@@ -9,6 +9,7 @@ import { PostsService } from 'src/app/services/posts.service';
 export class PostsComponent implements OnInit {
   posts: Post[] = [];
   public value: any = '';
+  pageNumber: number = 1;
   constructor(private _posts: PostsService) { }
 
   ngOnInit(): void {
